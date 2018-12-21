@@ -15,6 +15,8 @@
 		9809FEBB21CCCB580019E010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9809FEBA21CCCB580019E010 /* main.m */; };
 		9809FEC521CCCB580019E010 /* YYQRcodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9809FEC421CCCB580019E010 /* YYQRcodeTests.m */; };
 		9809FED021CCCB580019E010 /* YYQRcodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9809FECF21CCCB580019E010 /* YYQRcodeUITests.m */; };
+		9809FEE321CCCBA70019E010 /* MITQRcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9809FEDF21CCCBA70019E010 /* MITQRcodeViewController.m */; };
+		9809FEE521CCCBA70019E010 /* QRcodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9809FEE221CCCBA70019E010 /* QRcodeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		9809FECB21CCCB580019E010 /* YYQRcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYQRcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9809FECF21CCCB580019E010 /* YYQRcodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYQRcodeUITests.m; sourceTree = "<group>"; };
 		9809FED121CCCB580019E010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9809FEDE21CCCBA70019E010 /* QRcodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeModel.h; sourceTree = "<group>"; };
+		9809FEDF21CCCBA70019E010 /* MITQRcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MITQRcodeViewController.m; sourceTree = "<group>"; };
+		9809FEE121CCCBA70019E010 /* MITQRcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MITQRcodeViewController.h; sourceTree = "<group>"; };
+		9809FEE221CCCBA70019E010 /* QRcodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		9809FEAA21CCCB540019E010 /* YYQRcode */ = {
 			isa = PBXGroup;
 			children = (
+				9809FEDD21CCCBA70019E010 /* QRcode */,
 				9809FEAB21CCCB540019E010 /* AppDelegate.h */,
 				9809FEAC21CCCB540019E010 /* AppDelegate.m */,
 				9809FEAE21CCCB540019E010 /* ViewController.h */,
@@ -130,6 +137,17 @@
 				9809FED121CCCB580019E010 /* Info.plist */,
 			);
 			path = YYQRcodeUITests;
+			sourceTree = "<group>";
+		};
+		9809FEDD21CCCBA70019E010 /* QRcode */ = {
+			isa = PBXGroup;
+			children = (
+				9809FEDE21CCCBA70019E010 /* QRcodeModel.h */,
+				9809FEDF21CCCBA70019E010 /* MITQRcodeViewController.m */,
+				9809FEE121CCCBA70019E010 /* MITQRcodeViewController.h */,
+				9809FEE221CCCBA70019E010 /* QRcodeModel.m */,
+			);
+			path = QRcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +283,8 @@
 				9809FEB021CCCB540019E010 /* ViewController.m in Sources */,
 				9809FEBB21CCCB580019E010 /* main.m in Sources */,
 				9809FEAD21CCCB540019E010 /* AppDelegate.m in Sources */,
+				9809FEE321CCCBA70019E010 /* MITQRcodeViewController.m in Sources */,
+				9809FEE521CCCBA70019E010 /* QRcodeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,13 +457,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YYQRcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23456.YYQRcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,13 +474,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YYQRcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23456.YYQRcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
